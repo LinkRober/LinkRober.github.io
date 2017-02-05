@@ -49,3 +49,31 @@ body {
     color: lightgray;
     font-size: 12px;
 }
+.content {
+    margin: 10px 50px 10px 50px;
+}
+.title {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0px;
+}
+.text {
+    margin: 5px 0px 0px 0px;
+    color: gray;
+}
+.subtitle {
+    margin: 20px 0px 0px 0px;
+    color: lightgray;
+    display: inline-block;
+}
+.subtitle a {
+    border: 1px solid #BF1827; 
+    border-radius: 20px; 
+    padding: 6px 8px; 
+    font-size: .8em; 
+    margin-left: 10px;
+    color: #BF1827
+}
+.subtitle a:link {
+    text-decoration:none;
+}
