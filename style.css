@@ -15,7 +15,15 @@
     float: left;
     width:20%;
     height: 100%;
-    background-color: black;
+    /*background-color: black;*/
+    background-image: url(./images/sunset.jpg);
+}
+.headerimage {
+    /*align-content: center;*/     
+    padding-top: 50px;
+    text-align: center;
+    border-radius: 25px;
+    /*border: 1px solid white;*/
 }
 .selectarea {
     margin: 50px;
@@ -28,7 +36,7 @@
 .leftlist p {
     color: lightgray;
     text-align: center;
-    margin: 50px 10px 10px 10px;
+    margin: 30px 10px 10px 10px;
     font-size: 15px;
 }
 .leftlist a {
