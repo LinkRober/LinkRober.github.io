@@ -7,7 +7,7 @@
     <body>
         <div class="contain">
             <div class="header">
-                <span class="name">LinkRober</span><span>iOS Developer and alse is leaning Web Now</span>
+                <a href="../index.html"><span class="name">LinkRober</span></a><span>iOS Developer and alse is leaning Web Now</span>
             </div>
             <div class="project_title">
                 <h2>Map、Filter、Reduce</h2>
@@ -75,9 +75,44 @@
                         <p class="code_ppp">result.append(x)<br></p>
                         <p class="code_pp">}<br></p>
                         <p class="code_pp">return result<br></p>
-                        <p>}<br></p>
+                        <p class="code_p">}<br></p>
                         }
                 </div>
+                <div class="line"></div>
+                <div class="conent_title">
+                    <h4>Reduce</h4>
+                </div>
+                <div class="content_text">先看一个例子：</div>
+                <div class="code">
+                    func sum(xs: [Int]) -> Int {<br>
+                        <p class="code_p">var result: Int = 0<br></p>
+                        <p class="code_p">for x in xs {<br></p>
+                        <p class="code_pp">result += x<br></p>
+                        <p class="code_p">}<br></p>
+                        <p class="code_p">return result<br></p>
+                        }
+                </div>
+                <div class="content_text">Reduce定义了初始值，结果值，和中间的transform函数。而Map把结果限定在一个数组范围，Filter的transform的结果只能是布尔值。Reduce摆脱了这些限制，也就是说Reduce更加的抽象，可以用它来重写自己的Map和Filter。</div>
+                <div class="code">
+                    extension Array {<br>
+                        <p class="code_p">func reduce<T>(initial: T, combine: (T, Element) -> T) -> T {<br></p>
+                            <p class="code_pp">var result = initial<br></p>
+                            <p class="code_pp">for x in self {<br></p>
+                               <p class="code_ppp"> result = combine(result, x)<br></p>
+                               <p class="code_ppp"> }<br></p>
+                               <p class="code_ppp"> return result<br></p>
+                            <p class="code_pp">}<br></p>
+                        }
+                </div>
+                <div class="conent_title">
+                    <h4>Summary</h4>
+                </div>
+                <div class="content_text">通过这三个高阶函数可以学到：</div>
+                <ul>
+                    <li>函数在swift里面是一等公民，把它当作参数，在方法间传递，是在面向函数编程的时候一个重要的思想转变</li>
+                    <li>swift里面的范型比起oc更加的强大，有利于我们抽象问题</li>
+                    <li>最后，苹果的方法用的不爽可以自己写，哈哈😄</li>
+                </ul>
             </div>
         </div>
     </body>
