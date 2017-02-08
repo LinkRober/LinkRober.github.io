@@ -1,0 +1,23 @@
+.header {
+    color: gray;
+    background-color:white;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+    border-bottom: 1px lightgray solid;
+}
+.header :first-child {
+    color: black;
+    margin-right: 15px;
+}
+.project_title {
+    text-align: center;
+}
+.project_title p {
+    color: lightgray;
+    font-size: 15px;
+    margin-top: 0px;
+}
+.project_title h2 {
+    margin-bottom: 10px;
+}
