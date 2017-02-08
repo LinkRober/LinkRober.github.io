@@ -1,3 +1,13 @@
+.contain {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.line {
+    padding-bottom: 50px;
+    border-bottom:lightslategray solid 1px;
+}
+strong {
+    color: red;
+}
 .header {
     color: gray;
     background-color:white;
@@ -19,5 +29,29 @@
     margin-top: 0px;
 }
 .project_title h2 {
+    margin-bottom: 10px;
+}
+.content {
+    margin: 0px 25% 25% 25%;
+}
+
+
+.code {
+    width: 50%;
+    background-color: rgb(246, 246, 246);
+    padding: 10px;
+    margin-bottom: 10px;
+    border:lightgray solid 1px;
+}
+.code_p {
+    margin: 0px 0px 0px 10px;
+}
+.code_pp {
+        margin: 0px 0px 0px 20px;
+}
+.code_ppp {
+        margin: 0px 0px 0px 30px;
+}
+.content_text {
     margin-bottom: 10px;
 }

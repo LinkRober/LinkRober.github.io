@@ -13,6 +13,72 @@
                 <h2>Map、Filter、Reduce</h2>
                 <p>2017-02-05</p>
             </div>
+            <div class="content">
+                <div class="conent_title">
+                    <h4>Map</h4>
+                </div>
+                <div class="content_text">
+                    <p>先来看一些简单的code，这些code阐述了Map做了些什么，又是怎么一步一步抽象到系统的<strong>Map</strong>的</p>
+                </div>
+                <div class="code">
+                    func incrementArray(xs: [Int]) -> [Int] { <br>
+                       <p class="code_p"> var result: [Int] = []</p>
+                       <p class="code_p"> for x in xs {</p>
+                       <p class="code_pp"> result.append(x + 1) <br></p>
+                       <p class="code_p"> }<br></p>
+                      <p class="code_p">return result<br></p>
+                    }
+                </div>
+                <div class="content_text">
+                    接受一个整型数组，数组里面每个数加1，再返回新的数组。这个很简单，如果要乘2怎么办呢，于是我们再写一个：
+                </div>
+                <div class="code">
+                    func doubleArray1(xs: [Int]) -> [Int] {<br>
+                        <p class="code_p">var result: [Int] = []<br></p>
+                        <p class="code_p">for x in xs {<br></p>
+                        <p class="code_pp">result.append(x * 2)<br></p>
+                        <p class="code_p">}<br></p>
+                        <p class="code_p">return result<br></p>
+                        }
+                </div>
+                <div class="content_text">可以看出有大量相同的code，不同的只有在对数组元素作出改变的时候。对着两个方法进行抽象：</div>
+                <div class="code">
+                    func computeIntArray(xs: [Int], transform: Int -> Int) -> [Int] {<br>
+                        <p class="code_p">var result: [Int] = []<br></p>
+                        <p class="code_p">for x in xs {<br></p>
+                        <p class="code_pp">result.append(transform(x))<br></p>
+                        <p class="code_p">}<br></p>
+                        <p class="code_p">return result<br></p>
+                        }
+                </div>
+                <div class="content_text">所有的变化都放到函数<strong>transform</strong>里面,看起来是ok了，其实还有一个坑，那就是参数。重要的参数其实只有两种，初始参数和结果参数，我们用范型来替代<strong>&#60Element>、&#60T></strong>。最终形式如下：</div>
+                <div class="code">
+                    func map<Element, T>(xs: [Element], transform: Element -> T) -> [T] {<br>
+                       <p class="code_p"> var result: [T] = []<br></p>
+                       <p class="code_p"> for x in xs {<br></p>
+                       <p class="code_pp"> result.append(transform(x))<br></p>
+                       <p class="code_p"> }<br></p>
+                       <p class="code_p"> return result<br></p>
+                    }
+                </div>
+                <div class="content_text">这样就很完美了。官方的做法就是将这个放过划到数组的<strong>extenston</strong>中。</div>
+                <div class="line"></div>
+                <div class="conent_title">
+                    <h4>Filter</h4>
+                </div>
+                <div class="content_text">Filter意思就是过滤，去掉不符合条件的数组元素，所以这个方法里的重要参数只有一种<strong>&#60Element></strong>,在<strong>transform</strong>方法里面进行筛选，官方的最终code如下</div>
+                <div class="code">
+                    extension Array {<br>
+                        <p class="code_p">func filter(includeElement: Element -> Bool) -> [Element] {<br></p>
+                        <p class="code_pp">var result: [Element] = []<br></p>
+                        <p class="code_pp">for x in self where includeElement(x) {<br></p>
+                        <p class="code_ppp">result.append(x)<br></p>
+                        <p class="code_pp">}<br></p>
+                        <p class="code_pp">return result<br></p>
+                        <p>}<br></p>
+                        }
+                </div>
+            </div>
         </div>
     </body>
 </html>
