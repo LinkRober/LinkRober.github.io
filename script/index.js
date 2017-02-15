@@ -1,16 +1,21 @@
 
-// function moveMenu(){
-//     var leftDocument = document.getElementById("left_js");
-//     leftDocument.addEventListener("animationstart", move);
-// }
-
 function moveMenu(){
         var leftDocument = document.getElementById("left_js");
-        // leftDocument.style.display = "none";
-        leftDocument.classList.add("hide");
-        // setTimeout(function() {
-        //     leftDocument.classList.remove("hide");
-        // }, 2000);
+        var rightDocument = document.getElementsByClassName("rightlist")[0];
+
+        if (leftDocument.style.clientWidth == 0){
+            // leftDocument.classList.add("show_leftlist");
+            // leftDocument.classList.add
+            //  rightDocument.style.width = "100px";
+            // leftDocument.style.opacity = "1";
+            leftDocument.classList.remove('hide_leftlist');
+            leftDocument.classList.toggle("show_leftlist");
+        }else {
+            leftDocument.classList.add("hide_leftlist");
+            // setTimeout(function () {
+            //     leftDocument.classList.remove('hide_leftlist');
+            // }, 2000)
+        }
 }
 
 

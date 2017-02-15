@@ -96,25 +96,23 @@ body {
 .subtitle a:link {
     text-decoration:none;
 }
-.hide {
-    /*0% {
-        display: block;
-        opacity: 1;
-    }
-    99% {
-        display: block;
-    }
-    100% {
-        display: none;
-        opacity: 0;
-    }*/
+.hide_leftlist {
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
-    /*margin-right: 100%;*/
-    /*display: none;*/
-    width: 0px;
-    opacity: 0;
+    /*width: 0px;*/
+    /*opacity: 0;*/
+    transform: translate(-100%,0px);
+}
+.show_leftlist {
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    /*width: 100px;*/
+    opacity: 1;
+    transform: translate(-100%,0px);           
 }
