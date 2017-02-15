@@ -1,13 +1,16 @@
+
+// function moveMenu(){
+//     var leftDocument = document.getElementById("left_js");
+//     leftDocument.addEventListener("animationstart", move);
+// }
+
 function moveMenu(){
-    var leftDocument = document.getElementById("left_js");
-    leftDocument.style.width = "0px";
-    // var nameDocument = document.getElementById("left_js.span");
-    
-    // var userHeadDocument = document.getElementById("userhead_js");
-    // userHeadDocument.style.width = "0px";
-
-    // var nameDocument = document.getElementById("name_js > span");
-    // nameDocument.innerText = "#ff0000"
-    
-
+        var leftDocument = document.getElementById("left_js");
+        // leftDocument.style.display = "none";
+        leftDocument.classList.add("hide");
+        // setTimeout(function() {
+        //     leftDocument.classList.remove("hide");
+        // }, 2000);
 }
+
+
