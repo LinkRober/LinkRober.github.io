@@ -1,20 +1,18 @@
 
 function moveMenu(){
-        var leftDocument = document.getElementById("left_js");
+        var leftDocument = document.getElementsByClassName("leftlist")[0]
         var rightDocument = document.getElementsByClassName("rightlist")[0];
-
+        console.log(leftDocument)
+        console.log(rightDocument)
+        // var dd = $('#left_js');
+        console.log(leftDocument.style.left);
+        // dd.hide(100);
         if (leftDocument.style.clientWidth == 0){
-            // leftDocument.classList.add("show_leftlist");
-            // leftDocument.classList.add
-            //  rightDocument.style.width = "100px";
-            // leftDocument.style.opacity = "1";
-            leftDocument.classList.remove('hide_leftlist');
+            console.log('111');
             leftDocument.classList.toggle("show_leftlist");
         }else {
-            leftDocument.classList.add("hide_leftlist");
-            // setTimeout(function () {
-            //     leftDocument.classList.remove('hide_leftlist');
-            // }, 2000)
+            console.log('222')            
+            leftDocument.classList.toggle("hide_leftlist");
         }
 }
 
